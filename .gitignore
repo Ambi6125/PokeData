@@ -35,6 +35,7 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 .env.local
+.dev.env
 
 # TypeScript build state (from ts-node)
 .rts2_cache_cjs/
