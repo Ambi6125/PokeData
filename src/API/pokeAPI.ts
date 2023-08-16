@@ -15,7 +15,9 @@ const baseURL: string = "https://pokeapi.co/api/v2/pokemon/";
 
 const pokeAPI = {
   getPokemon: (name: string): Promise<Pokemon> => {
-    return axios.get(baseURL.concat(name)).then((response: AxiosResponse) => {
+    const nameSearch = baseURL.concat(name.toLowerCase());
+    console.log(name)
+    return axios.get(nameSearch).then((response: AxiosResponse) => {
       const data: any = response.data;
       const pokemon: Pokemon = {
         name: data.name,
